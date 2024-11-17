@@ -1,0 +1,2 @@
+# uniodevleripython
+Üniversitedeki Python Ödevlerim
