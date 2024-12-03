@@ -1,0 +1,2870 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNFbm/aRs/kPA82XT+td45C",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/roketbilimcisi/uniodevleripython/blob/main/Pythonkonu4\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " **1. If, Else, Elif Nedir?**"
+      ],
+      "metadata": {
+        "id": "THYtDPP6L9zp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**If (Eğer):**\n",
+        "Bir koşulun doğru olup olmadığını kontrol eder. Eğer koşul **True** dönerse, `if` bloğundaki kod çalışır.  \n"
+      ],
+      "metadata": {
+        "id": "CCz0ze2yL-U7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "furkan = 10\n",
+        "\n",
+        "if furkan > 5:  # if koşul:  (Belli bir koşul belirteceğiz)\n",
+        "    print(\"Furkan 5'ten büyüktür.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_XiS0VT_PAmb",
+        "outputId": "7c7d71ed-1884-410b-ccf4-e09df62a2aa7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Furkan 5'ten büyüktür.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Else (Değilse):**\n",
+        "`if` koşulu yanlışsa (False), `else` bloğundaki kod çalışır."
+      ],
+      "metadata": {
+        "id": "Y_UThY9OPNIy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sonmez = False\n",
+        "if sonmez:\n",
+        "  print(\"Doğru olunca çalışacak\")\n",
+        "else:\n",
+        "  print(\"Yanlış olunca çalışacak\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QQCvhqsKPfG6",
+        "outputId": "24049657-93aa-49d4-b96a-c780b075eb14"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Yanlış olunca çalışacak\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Elif (Başka bir koşul kontrol et):**\n",
+        "Birden fazla koşul kontrol etmek için kullanılır.  "
+      ],
+      "metadata": {
+        "id": "ph0qMA9oP-JS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "kosul = 10\n",
+        "\n",
+        "if kosul > 10 :\n",
+        "  print(\"10'dan büyük\")\n",
+        "elif kosul == 10:\n",
+        "  print(\"10'a eşit\")\n",
+        "else:\n",
+        "  print(\"10'dan küçük\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VrwUC6QVQCqd",
+        "outputId": "027d476d-8b7d-4944-9dc2-bd5868415bcd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10'a eşit\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**İç İçe If (Nested If):**\n",
+        "Bir `if` bloğunun içinde başka bir `if` bloğu yer alabilir. Bu, daha karmaşık mantıkların kurulmasına olanak tanır.\n"
+      ],
+      "metadata": {
+        "id": "7IsQn6ASQgs7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x, y = 10, 20\n",
+        "\n",
+        "if x > 0:\n",
+        "    if y > 0: # tek tab\n",
+        "        print(\"Hem x hem y pozitif.\")  # çift tab\n",
+        "    else:\n",
+        "        print(\"x pozitif ama y negatif.\")\n",
+        "else:\n",
+        "    print(\"x pozitif değil.\\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ur8CM6JWQhdS",
+        "outputId": "8f1f827e-9043-4c6a-d4c7-1376b31c8657"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hem x hem y pozitif.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**2. Kolay Seviye**"
+      ],
+      "metadata": {
+        "id": "0xrRI_0xRPAf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.1 Örnek: Pozitif bir sayıyı kontrol et\n"
+      ],
+      "metadata": {
+        "id": "FXy7l02ARfR8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"Bir sayı girin: \"))\n",
+        "if x > 0:\n",
+        "    print(\"Pozitif sayı.\")\n",
+        "else:\n",
+        "    print(\"Negatif sayı.\\n\")\n"
+      ],
+      "metadata": {
+        "id": "gDEGPGwVRgUC",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ece68d74-dece-4ff6-cb0e-4071cbcd6ee1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir sayı girin: 51\n",
+            "Pozitif sayı.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.2 Örnek: Tek veya çift sayı kontrolü\n"
+      ],
+      "metadata": {
+        "id": "lQ5etymORk8S"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"Bir sayı girin: \"))\n",
+        "if x % 2 == 0:\n",
+        "    print(\"Çift sayı.\")\n",
+        "else:\n",
+        "    print(\"Tek sayı.\\n\")\n"
+      ],
+      "metadata": {
+        "id": "Bl8u7VI3RnSE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "110229e0-2323-4246-d477-19a540dcc353"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir sayı girin: 48\n",
+            "Çift sayı.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.3 Örnek: Kullanıcı girişine göre selamlama"
+      ],
+      "metadata": {
+        "id": "rtW-gwGJRp8N"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ad = input(\"Adınızı girin: \")\n",
+        "if ad:\n",
+        "    print(f\"Merhaba, {ad}!\")\n",
+        "else:\n",
+        "    print(\"Adınızı girmediniz.\\n\")"
+      ],
+      "metadata": {
+        "id": "MPIN1gDoRtUh",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c03d7245-647d-4205-ca7a-09fd7c502ce0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Adınızı girin: Furkan\n",
+            "Merhaba, Furkan!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.4 Örnek: Sıcaklık durumu"
+      ],
+      "metadata": {
+        "id": "oA3NJ9WhR2Bq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sıcaklık = int(input(\"Sıcaklık değerini girin: \"))\n",
+        "if sıcaklık > 30:\n",
+        "    print(\"Hava çok sıcak!\")\n",
+        "elif sıcaklık > 15:\n",
+        "    print(\"Hava ılık.\")\n",
+        "else:\n",
+        "    print(\"Hava soğuk.\\n\")"
+      ],
+      "metadata": {
+        "id": "59H4cNffR4ob",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ab3d5fd6-c585-4725-f7d0-20a2211cab56"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sıcaklık değerini girin: 8484\n",
+            "Hava çok sıcak!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.5 Örnek: İki sayıyı karşılaştır\n"
+      ],
+      "metadata": {
+        "id": "CbR6ZDRdR7Xm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = int(input(\"Birinci sayıyı girin: \"))\n",
+        "b = int(input(\"İkinci sayıyı girin: \"))\n",
+        "if a > b:\n",
+        "    print(f\"{a} büyüktür {b}.\")\n",
+        "else:\n",
+        "    print(f\"{b} büyüktür {a}.\\n\")\n"
+      ],
+      "metadata": {
+        "id": "h0pehAeUR9yk",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e142fb30-4605-4671-dfb9-e932adb2125a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Birinci sayıyı girin: 84\n",
+            "İkinci sayıyı girin: 48\n",
+            "84 büyüktür 48.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**3. Orta Seviye**\n"
+      ],
+      "metadata": {
+        "id": "8i3Ng97UR_xR"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3.1 Örnek: Öğrencinin notuna göre harf notu\n"
+      ],
+      "metadata": {
+        "id": "uyumh1FWSF2h"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "notu = int(input(\"Öğrencinin notunu girin: \"))\n",
+        "if notu >= 90:\n",
+        "    print(\"AA\")\n",
+        "elif notu >= 80:\n",
+        "    print(\"BA\")\n",
+        "elif notu >= 70:\n",
+        "    print(\"BB\")\n",
+        "else:\n",
+        "    print(\"Daha fazla çalışmalısınız.\\n\")"
+      ],
+      "metadata": {
+        "id": "tOOsZHVfSGVH",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "aff968ff-0a13-43e0-e088-7b36a79e6c91"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Öğrencinin notunu girin: 48\n",
+            "Daha fazla çalışmalısınız.\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3.2 Örnek: Bir yılın artık yıl olup olmadığını kontrol et\n"
+      ],
+      "metadata": {
+        "id": "QonPfBatSLQ8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "yıl = int(input(\"Yılı girin: \"))\n",
+        "if yıl % 4 == 0 and (yıl % 100 != 0 or yıl % 400 == 0):\n",
+        "    print(\"Artık yıl.\")\n",
+        "else:\n",
+        "    print(\"Artık yıl değil.\\n\")\n"
+      ],
+      "metadata": {
+        "id": "TgqCUB1ySNNY",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f560edbb-2300-4968-f82d-8e6b5a3d63f4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Yılı girin: 2004\n",
+            "Artık yıl.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3.3 Örnek: İç içe if ile üçgen tipi kontrolü\n"
+      ],
+      "metadata": {
+        "id": "R214ZHs7SO9a"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a, b, c = map(int, input(\"Üçgenin kenar uzunluklarını girin (a b c): \").split())\n",
+        "if a + b > c and a + c > b and b + c > a:\n",
+        "    if a == b == c:\n",
+        "        print(\"Eşkenar üçgen.\")\n",
+        "    elif a == b or a == c or b == c:\n",
+        "        print(\"İkizkenar üçgen.\")\n",
+        "    else:\n",
+        "        print(\"Çeşitkenar üçgen.\")\n",
+        "else:\n",
+        "    print(\"Bu bir üçgen değil.\\n\")\n"
+      ],
+      "metadata": {
+        "id": "J5wuKgXISQ_X",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2e4a41f3-cf96-450e-f96b-cd960f61cdef"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Üçgenin kenar uzunluklarını girin (a b c): 40 50 60\n",
+            "Çeşitkenar üçgen.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3.4 Örnek: Bir sayının pozitif, negatif ya da sıfır olduğunu kontrol et\n"
+      ],
+      "metadata": {
+        "id": "hX81eX-VSTTf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"Bir sayı girin: \"))\n",
+        "if x > 0:\n",
+        "    print(\"Pozitif sayı.\")\n",
+        "elif x < 0:\n",
+        "    print(\"Negatif sayı.\")\n",
+        "else:\n",
+        "    print(\"Sayı sıfır.\\n\")"
+      ],
+      "metadata": {
+        "id": "WUyCzMWPSUlE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3537ae1d-731b-4eea-f2e3-39dc8ea2a039"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir sayı girin: 181\n",
+            "Pozitif sayı.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3.5 Örnek: Kullanıcıdan yaş al ve uygunluk kontrol et\n"
+      ],
+      "metadata": {
+        "id": "qRFNbdIfS3Dy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "yaş = int(input(\"Yaşınızı giriniz: \"))\n",
+        "if yaş >= 18:\n",
+        "    print(\"Ehliyet alabilirsiniz.\")\n",
+        "else:\n",
+        "    print(\"Ehliyet alamazsınız.\\n\")"
+      ],
+      "metadata": {
+        "id": "WLqj4HSfS3ov",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9875e1e9-3f85-478f-8fe0-16bd6ba9b0b7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Yaşınızı giriniz: 48\n",
+            "Ehliyet alabilirsiniz.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**4.Orta ve Zor Seviye Örnekler**"
+      ],
+      "metadata": {
+        "id": "ErGsbPTvV7_0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.1 Örnek: Sayının 5 ile 10 arasında olup olmadığını kontrol et\n"
+      ],
+      "metadata": {
+        "id": "YfFSJNLIWLFN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 7\n",
+        "if x > 5:\n",
+        "    if x < 10:\n",
+        "        print(\"x, 5 ile 10 arasında.\")\n",
+        "    else:\n",
+        "        print(\"x, 10 veya daha büyük.\")\n",
+        "else:\n",
+        "    print(\"x, 5 veya daha küçük.\")"
+      ],
+      "metadata": {
+        "id": "sfXrD8iMWl41",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6152f95c-f394-413b-de2a-5200cfa89406"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x, 5 ile 10 arasında.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.2 Örnek: Gün kontrolü\n"
+      ],
+      "metadata": {
+        "id": "tMPfJcD3WTsN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "gün = \"Cumartesi\"\n",
+        "if gün in [\"Cumartesi\", \"Pazar\"]:\n",
+        "    print(\"Hafta sonu.\")\n",
+        "else:\n",
+        "    print(\"Hafta içi.\")"
+      ],
+      "metadata": {
+        "id": "0aQfhFblWoXY",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4960e14c-432a-4148-b4ba-7809a76d61e5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hafta sonu.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.3 Örnek: Sayı kontrolü (Çoklu koşul)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "IuvCIfgkWYDX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 15\n",
+        "if x % 3 == 0 and x % 5 == 0:\n",
+        "    print(\"Sayı 3 ve 5'e tam bölünüyor.\")\n",
+        "else:\n",
+        "    print(\"Sayı 3 veya 5'e tam bölünmüyor.\")"
+      ],
+      "metadata": {
+        "id": "a8R44kjEWqVW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "300f7b00-8b66-4d9c-9328-a9d3bc93f3f6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sayı 3 ve 5'e tam bölünüyor.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.4 Örnek: Kullanıcı adı ve şifre doğrulama\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "gJncnhJBWYab"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "kullanıcı_adı = \"admin\"\n",
+        "şifre = \"1234\"\n",
+        "giriş_adı = input(\"Kullanıcı adınızı girin: \")\n",
+        "giriş_şifre = input(\"Şifrenizi girin: \")\n",
+        "\n",
+        "if giriş_adı == kullanıcı_adı:\n",
+        "    if giriş_şifre == şifre:\n",
+        "        print(\"Giriş başarılı!\")\n",
+        "    else:\n",
+        "        print(\"Şifre yanlış.\")\n",
+        "else:\n",
+        "    print(\"Kullanıcı adı yanlış.\")"
+      ],
+      "metadata": {
+        "id": "9sXLKbYNWsKO",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c17ee5a0-a6f4-400f-cece-09f96af9b50f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Kullanıcı adınızı girin: roket\n",
+            "Şifrenizi girin: 8448\n",
+            "Kullanıcı adı yanlış.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4.5 Örnek: Sayı büyüklük karşılaştırması\n"
+      ],
+      "metadata": {
+        "id": "9oDh41J6WYu7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a, b, c = 3, 7, 5\n",
+        "if a > b and a > c:\n",
+        "    print(f\"En büyük sayı: {a}\")\n",
+        "elif b > c:\n",
+        "    print(f\"En büyük sayı: {b}\")\n",
+        "else:\n",
+        "    print(f\"En büyük sayı: {c}\")"
+      ],
+      "metadata": {
+        "id": "8Qx8npb4WujA",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a590f584-134d-49b2-e964-61e28841eeab"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "En büyük sayı: 7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**5. Zor Seviye**\n"
+      ],
+      "metadata": {
+        "id": "FC8eBppnS6m6"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5.1 Örnek: Sayının asal olup olmadığını kontrol et\n"
+      ],
+      "metadata": {
+        "id": "u1yt5E3DS_Bz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"Bir sayı girin: \"))\n",
+        "if x > 1:\n",
+        "    for i in range(2, int(x ** 0.5) + 1):\n",
+        "        if x % i == 0:\n",
+        "            print(\"Asal değil.\")\n",
+        "            break\n",
+        "    else:\n",
+        "        print(\"Asal sayı.\")\n",
+        "else:\n",
+        "    print(\"Asal değil.\\n\")"
+      ],
+      "metadata": {
+        "id": "iIJRvAs6S_qe",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f379e717-7f20-485a-97fe-ae473679fbb0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir sayı girin: 84484\n",
+            "Asal değil.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5.2 Örnek: Üçgen tipi kontrolü"
+      ],
+      "metadata": {
+        "id": "LtWfjDBfTCXq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a, b, c = 6, 8, 10\n",
+        "if a + b > c and a + c > b and b + c > a:\n",
+        "    if a == b == c:\n",
+        "        print(\"Eşkenar üçgen.\")\n",
+        "    elif a == b or a == c or b == c:\n",
+        "        print(\"İkizkenar üçgen.\")\n",
+        "    else:\n",
+        "        print(\"Çeşitkenar üçgen.\")\n",
+        "else:\n",
+        "    print(\"Üçgen oluşturulamaz.\")"
+      ],
+      "metadata": {
+        "id": "SXL1dqvOTEVr",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a98536d0-2a62-4693-cf7c-609c1b11d4ed"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Çeşitkenar üçgen.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5.3 Örnek: BMI hesaplama"
+      ],
+      "metadata": {
+        "id": "w73uthyNX8MZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "boy = float(input(\"Boyunuzu metre cinsinden girin: \"))\n",
+        "kilo = float(input(\"Kilonuzu girin: \"))\n",
+        "bmi = kilo / (boy ** 2)\n",
+        "\n",
+        "if bmi < 18.5:\n",
+        "    print(\"Zayıf\")\n",
+        "elif bmi < 24.9:\n",
+        "    print(\"Normal\")\n",
+        "elif bmi < 29.9:\n",
+        "    print(\"Fazla kilolu\")\n",
+        "else:\n",
+        "    print(\"Obez\")"
+      ],
+      "metadata": {
+        "id": "_HtFo4IpYN3P",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "89c910d7-af78-4b7a-d3a5-b4bb4820d59e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Boyunuzu metre cinsinden girin: 8448\n",
+            "Kilonuzu girin: 8448\n",
+            "Zayıf\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5.4 Örnek: Bir string içinde belirli bir harfin olup olmadığını kontrol et"
+      ],
+      "metadata": {
+        "id": "YYtUu_R-X8pt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "kelime = \"Merhaba\"\n",
+        "harf = \"e\"\n",
+        "if harf in kelime:\n",
+        "    print(f\"'{harf}' harfi kelimede var.\")\n",
+        "else:\n",
+        "    print(f\"'{harf}' harfi kelimede yok.\")"
+      ],
+      "metadata": {
+        "id": "fKrRg5BuYQ7x",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5929ef20-4994-4a99-e631-4e7dfb0717be"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "'e' harfi kelimede var.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5.5 Örnek: Elektrik faturası hesaplama"
+      ],
+      "metadata": {
+        "id": "ntHVQM7vX8y8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tüketim = int(input(\"Tüketilen kWh miktarını girin: \"))\n",
+        "if tüketim <= 150:\n",
+        "    tutar = tüketim * 0.5\n",
+        "elif tüketim <= 300:\n",
+        "    tutar = (150 * 0.5) + ((tüketim - 150) * 0.75)\n",
+        "else:\n",
+        "    tutar = (150 * 0.5) + (150 * 0.75) + ((tüketim - 300) * 1.0)"
+      ],
+      "metadata": {
+        "id": "Ru5NNA8dYYKF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f45a698a-7535-4a11-ed5d-be66807b716f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Tüketilen kWh miktarını girin: 8848\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**6.Gelişmiş Örnekler**"
+      ],
+      "metadata": {
+        "id": "EVuMdvAGYtbV"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6.1 Örnek: Girilen üç sayıdan birinin toplamının diğer ikisine eşit olup olmadığını kontrol et"
+      ],
+      "metadata": {
+        "id": "u7qn7mWxf5Zz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a, b, c = 5, 10, 15\n",
+        "if a + b == c or a + c == b or b + c == a:\n",
+        "  print(\"Bir sayı diğer iki sayının toplamına eşittir.\")\n",
+        "else:\n",
+        "  print(\"Hiçbir sayı diğer ikisinin toplamına eşit değil.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ism8i_jpgH7E",
+        "outputId": "41e7298c-e40a-47fd-d481-689a04c9781e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir sayı diğer iki sayının toplamına eşittir.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6.2 Örnek: E-posta adresi doğrulama"
+      ],
+      "metadata": {
+        "id": "8JOtqNwrZU7G"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "email = input(\"E-posta adresinizi girin: \")\n",
+        "if \"@\" in email and \".\" in email:\n",
+        "  print(\"Geçerli bir e-posta adresi.\")\n",
+        "else:\n",
+        "  print(\"Geçersiz e-posta adresi.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ceNxz2mhgb0-",
+        "outputId": "acf2becf-fb3c-49eb-a57b-91629986cc48"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "E-posta adresinizi girin: sdada@hotmail.com\n",
+            "Geçerli bir e-posta adresi.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6.3 Örnek: Sıcaklık durumuna göre elbise önerisi"
+      ],
+      "metadata": {
+        "id": "hORLVsXgZVuE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sıcaklık = int(input(\"Hava sıcaklığını girin: \"))\n",
+        "if sıcaklık > 30:\n",
+        "  print(\"Tişört giyin.\")\n",
+        "elif sıcaklık > 20:\n",
+        "  print(\"Hafif bir ceket alın.\")\n",
+        "elif sıcaklık > 10:\n",
+        "  print(\"Kalın bir mont giyin.\")\n",
+        "else:\n",
+        "  print(\"Atkı ve bere takmayı unutmayın.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fKc5EAcEgk8B",
+        "outputId": "fce3abc4-3d7f-4ea3-e8ce-785bdeea67b6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hava sıcaklığını girin: 4884\n",
+            "Tişört giyin.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6.4 Örnek: Alışveriş indirim hesaplama"
+      ],
+      "metadata": {
+        "id": "kdS8y0lmZV4D"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tutar = float(input(\"Alışveriş tutarını girin: \"))\n",
+        "if tutar > 500:\n",
+        "  indirim = tutar * 0.2\n",
+        "elif tutar > 250:\n",
+        "  indirim = tutar * 0.1\n",
+        "else:\n",
+        "  indirim = 0\n",
+        "print(f\"İndiriminiz: {indirim} TL\")\n",
+        "print(f\"Ödenecek tutar: {tutar - indirim} TL\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nbDVMqEzgp-S",
+        "outputId": "6f1612b7-c0dc-4951-b7fd-7b9a92aaf87d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Alışveriş tutarını girin: 848\n",
+            "İndiriminiz: 169.60000000000002 TL\n",
+            "Ödenecek tutar: 678.4 TL\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6.5 Örnek: Kullanıcının yaşına göre kategorisini belirle"
+      ],
+      "metadata": {
+        "id": "3VD7VOCUZWCN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "yaş = int(input(\"Yaşınızı girin: \"))\n",
+        "if yaş < 13:\n",
+        "  print(\"Çocuk\")\n",
+        "elif yaş < 18:\n",
+        "  print(\"Genç\")\n",
+        "elif yaş < 60:\n",
+        "  print(\"Yetişkin\")\n",
+        "else:\n",
+        "  print(\"Yaşlı\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7l9XsTvAgw63",
+        "outputId": "9f9bc8fa-4b03-4510-d380-4038e9c5e17c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Yaşınızı girin: 84\n",
+            "Yaşlı\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**7.Gelişmiş ve Zor Seviye Örnekler**"
+      ],
+      "metadata": {
+        "id": "LhycMJ_Rapuj"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.1 Örnek: Öğrenci geçme durumu kontrolü"
+      ],
+      "metadata": {
+        "id": "-dIZzHVlcjDj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "vize = float(input(\"Vize notunu girin: \"))\n",
+        "final = float(input(\"Final notunu girin: \"))\n",
+        "ortalama = (vize * 0.4) + (final * 0.6)\n",
+        "if ortalama >= 50:\n",
+        "    print(f\"Geçtiniz! Ortalamanız: {ortalama}\")\n",
+        "else:\n",
+        "    print(f\"Kaldınız. Ortalamanız: {ortalama}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N9YR6Zy9g7lv",
+        "outputId": "9a1a25b8-08c5-41b9-e3ad-3e89f872d5f9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Vize notunu girin: 848\n",
+            "Final notunu girin: 48\n",
+            "Geçtiniz! Ortalamanız: 368.00000000000006\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.2 Örnek: Şifre güvenliği kontrolü"
+      ],
+      "metadata": {
+        "id": "rdoNzVKocjY8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "şifre = input(\"Şifrenizi girin: \")\n",
+        "if len(şifre) >= 8:\n",
+        "    if any(char.isdigit() for char in şifre) and any(char.isalpha() for char in şifre):\n",
+        "        print(\"Şifreniz güçlü.\")\n",
+        "    else:\n",
+        "        print(\"Şifreniz harf ve rakam içermeli.\")\n",
+        "else:\n",
+        "    print(\"Şifreniz en az 8 karakter olmalı.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oynhxLQuhBdx",
+        "outputId": "a59ad1b8-3059-4a6a-f184-ef9d3f64834d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Şifrenizi girin: 484884\n",
+            "Şifreniz en az 8 karakter olmalı.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.3 Örnek: Alışveriş kampanya kontrolü"
+      ],
+      "metadata": {
+        "id": "L9yE1ndccjkH"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tutar = float(input(\"Alışveriş tutarını girin: \"))\n",
+        "if tutar >= 1000:\n",
+        "    print(\"Bir sonraki alışverişinizde %20 indirim kazandınız!\")\n",
+        "elif tutar >= 500:\n",
+        "    print(\"Bir sonraki alışverişinizde %10 indirim kazandınız!\")\n",
+        "else:\n",
+        "    print(\"Maalesef kampanyaya dahil değilsiniz.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9vDzUEzThHoI",
+        "outputId": "449f8561-cc64-48ce-e580-49b7ff325dc3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Alışveriş tutarını girin: 848484\n",
+            "Bir sonraki alışverişinizde %20 indirim kazandınız!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.4 Örnek: Saatlik ücret ve fazla mesai hesaplama"
+      ],
+      "metadata": {
+        "id": "Komxh7GccjvN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "saatlik_ücret = 50\n",
+        "çalışma_saati = int(input(\"Toplam çalışma saatini girin: \"))\n",
+        "if çalışma_saati > 40:\n",
+        "    fazla_mesai = çalışma_saati - 40\n",
+        "    toplam_ücret = (40 * saatlik_ücret) + (fazla_mesai * saatlik_ücret * 1.5)\n",
+        "else:\n",
+        "    toplam_ücret = çalışma_saati * saatlik_ücret\n",
+        "print(f\"Toplam ücret: {toplam_ücret} TL\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zJP4eEFyhMiF",
+        "outputId": "4ebad765-f897-499f-9ea4-5d776c816b19"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Toplam çalışma saatini girin: 4884\n",
+            "Toplam ücret: 365300.0 TL\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.5 Örnek: Ürün stok durumu kontrolü"
+      ],
+      "metadata": {
+        "id": "zsHAHlqrcj7U"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "stok = 20\n",
+        "sipariş = int(input(\"Sipariş adedini girin: \"))\n",
+        "if sipariş <= stok:\n",
+        "    print(\"Siparişiniz hazırlanıyor.\")\n",
+        "else:\n",
+        "    print(f\"Yetersiz stok! Mevcut stok: {stok}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "72NiVsdjhRdR",
+        "outputId": "b79bddce-0d87-49fd-8d14-4ebc8e7f5450"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sipariş adedini girin: 118\n",
+            "Yetersiz stok! Mevcut stok: 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.6 Örnek: Sayının mutlak değerini hesapla"
+      ],
+      "metadata": {
+        "id": "CZ5RXbMbckmc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sayı = int(input(\"Bir sayı girin: \"))\n",
+        "if sayı < 0:\n",
+        "    mutlak_değer = -sayı\n",
+        "else:\n",
+        "    mutlak_değer = sayı\n",
+        "print(f\"Sayıyı mutlak değerine dönüştürdük: {mutlak_değer}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jHX145fwhRLl",
+        "outputId": "471def85-e4b7-4b85-962f-7e96ea5cdfed"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bir sayı girin: 151\n",
+            "Sayıyı mutlak değerine dönüştürdük: 151\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.7 Örnek: Üç sayı arasından ortancayı bulma"
+      ],
+      "metadata": {
+        "id": "vTJmGLOfcpg2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a, b, c = map(int, input(\"Üç sayı girin: \").split())\n",
+        "if (a > b and a < c) or (a > c and a < b):\n",
+        "    print(f\"Ortanca sayı: {a}\")\n",
+        "elif (b > a and b < c) or (b > c and b < a):\n",
+        "    print(f\"Ortanca sayı: {b}\")\n",
+        "else:\n",
+        "    print(f\"Ortanca sayı: {c}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 228
+        },
+        "id": "t_T4T7gshjHd",
+        "outputId": "05be7ea1-b4b5-4f11-875d-ddd3f80b826f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Üç sayı girin: 5151\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "not enough values to unpack (expected 3, got 1)",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-81-4590476d45a6>\u001b[0m in \u001b[0;36m<cell line: 1>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0ma\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mb\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mc\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mmap\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mint\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Üç sayı girin: \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msplit\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0ma\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0mb\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0ma\u001b[0m \u001b[0;34m<\u001b[0m \u001b[0mc\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0ma\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0mc\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0ma\u001b[0m \u001b[0;34m<\u001b[0m \u001b[0mb\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"Ortanca sayı: {a}\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;32melif\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mb\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0ma\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0mb\u001b[0m \u001b[0;34m<\u001b[0m \u001b[0mc\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mb\u001b[0m \u001b[0;34m>\u001b[0m \u001b[0mc\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0mb\u001b[0m \u001b[0;34m<\u001b[0m \u001b[0ma\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34mf\"Ortanca sayı: {b}\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mValueError\u001b[0m: not enough values to unpack (expected 3, got 1)"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.8 Örnek: Müşteri sadakat programı"
+      ],
+      "metadata": {
+        "id": "DgCkLt4IcpvJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "harcama = float(input(\"Toplam harcama tutarını girin: \"))\n",
+        "if harcama > 10000:\n",
+        "    print(\"Platin müşteri seviyesindesiniz.\")\n",
+        "elif harcama > 5000:\n",
+        "    print(\"Altın müşteri seviyesindesiniz.\")\n",
+        "elif harcama > 1000:\n",
+        "    print(\"Gümüş müşteri seviyesindesiniz.\")\n",
+        "else:\n",
+        "    print(\"Standart müşteri seviyesindesiniz.\")"
+      ],
+      "metadata": {
+        "id": "ahPi5dSGhnFx"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.9 Örnek: Kullanıcının maaşını gelir vergisine göre hesaplama"
+      ],
+      "metadata": {
+        "id": "1lLGaToecp8J"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "maaş = float(input(\"Maaşınızı girin: \"))\n",
+        "if maaş > 40000:\n",
+        "    vergi = maaş * 0.3\n",
+        "elif maaş > 20000:\n",
+        "    vergi = maaş * 0.2\n",
+        "else:\n",
+        "    vergi = maaş * 0.1\n",
+        "net_maaş = maaş - vergi\n",
+        "print(f\"Net maaşınız: {net_maaş} TL\")"
+      ],
+      "metadata": {
+        "id": "LdcnChLJhyVb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7.10 Örnek: Sıcaklık birimi dönüştürme"
+      ],
+      "metadata": {
+        "id": "yRpDhazocqKG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "birim = input(\"Sıcaklık birimi (C/F): \").upper()\n",
+        "değer = float(input(\"Sıcaklık değerini girin: \"))\n",
+        "if birim == \"C\":\n",
+        "    dönüşüm = (değer * 9/5) + 32\n",
+        "    print(f\"Sıcaklık: {dönüşüm} Fahrenheit\")\n",
+        "elif birim == \"F\":\n",
+        "    dönüşüm = (değer - 32) * 5/9\n",
+        "    print(f\"Sıcaklık: {dönüşüm} Celsius\")\n",
+        "else:\n",
+        "    print(\"Geçersiz birim.\")"
+      ],
+      "metadata": {
+        "id": "YQMC2oUqiC8M"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**8. Zor Seviye** **(2.adım)**"
+      ],
+      "metadata": {
+        "id": "FV1rMGyZb_6A"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.1 Örnek: Kullanıcı giriş sistemi"
+      ],
+      "metadata": {
+        "id": "AmitsYQJdD6V"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "kullanıcı_adı = \"admin\"\n",
+        "şifre = \"password123\"\n",
+        "girilen_ad = input(\"Kullanıcı adını girin: \")\n",
+        "girilen_şifre = input(\"Şifreyi girin: \")\n",
+        "if girilen_ad == kullanıcı_adı:\n",
+        "    if girilen_şifre == şifre:\n",
+        "        print(\"Giriş başarılı!\")\n",
+        "    else:\n",
+        "        print(\"Hatalı şifre!\")\n",
+        "else:\n",
+        "    print(\"Kullanıcı adı bulunamadı!\")"
+      ],
+      "metadata": {
+        "id": "xQZHjHXfiNe9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.2 Örnek: Dörtgen tipi kontrolü"
+      ],
+      "metadata": {
+        "id": "GcpWicn3dEfL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a, b, c, d = map(int, input(\"Dört kenar uzunluğunu girin (boşluklarla ayırarak): \").split())\n",
+        "if a == b == c == d:\n",
+        "    print(\"Kare\")\n",
+        "elif a == c and b == d:\n",
+        "    print(\"Dikdörtgen\")\n",
+        "else:\n",
+        "    print(\"Sıradan dörtgen\")"
+      ],
+      "metadata": {
+        "id": "K-KGKKjGiRpq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.3 Örnek: Telefon fatura hesaplama"
+      ],
+      "metadata": {
+        "id": "-yUU3gVTdEnY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dakika = int(input(\"Toplam konuşma süresini (dakika) girin: \"))\n",
+        "if dakika <= 100:\n",
+        "    ücret = dakika * 0.5\n",
+        "elif dakika <= 300:\n",
+        "    ücret = (100 * 0.5) + ((dakika - 100) * 0.4)\n",
+        "else:\n",
+        "    ücret = (100 * 0.5) + (200 * 0.4) + ((dakika - 300) * 0.3)\n",
+        "print(f\"Toplam fatura tutarınız: {ücret} TL\")"
+      ],
+      "metadata": {
+        "id": "o02hsYRciXr9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.4 Örnek: Geçerli üçgen kontrolü"
+      ],
+      "metadata": {
+        "id": "WUG30GMndEvV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a, b, c = map(int, input(\"Üç kenar uzunluğunu girin: \").split())\n",
+        "if a + b > c and a + c > b and b + c > a:\n",
+        "    print(\"Bu bir üçgen oluşturabilir.\")\n",
+        "else:\n",
+        "    print(\"Bu bir üçgen oluşturamaz.\")"
+      ],
+      "metadata": {
+        "id": "8OYbky3RiePf"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.5 Örnek: Not hesaplama sistemi"
+      ],
+      "metadata": {
+        "id": "q3Nu_tS4dE4P"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "vize1 = float(input(\"1. Vize notunu girin: \"))\n",
+        "vize2 = float(input(\"2. Vize notunu girin: \"))\n",
+        "final = float(input(\"Final notunu girin: \"))\n",
+        "ortalama = (vize1 * 0.3) + (vize2 * 0.3) + (final * 0.4)\n",
+        "if ortalama >= 60:\n",
+        "    if final >= 50:\n",
+        "        print(\"Geçtiniz!\")\n",
+        "    else:\n",
+        "        print(\"Final notu düşük olduğu için kaldınız.\")\n",
+        "else:\n",
+        "    print(\"Kaldınız.\")"
+      ],
+      "metadata": {
+        "id": "VBw3mzNyinyJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.6 Örnek: Geçerli şifre oluşturma"
+      ],
+      "metadata": {
+        "id": "KD6P7099dFNX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "şifre = input(\"Şifre giriniz: \")\n",
+        "if len(şifre) >= 8:\n",
+        "    if any(char.isdigit() for char in şifre) and any(char.isupper() for char in şifre):\n",
+        "        print(\"Şifre güvenli.\")\n",
+        "    else:\n",
+        "        print(\"Şifre, büyük harf ve rakam içermeli.\")\n",
+        "else:\n",
+        "    print(\"Şifre en az 8 karakter uzunluğunda olmalı.\")"
+      ],
+      "metadata": {
+        "id": "OXSRo1gEji2C"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.7 Örnek: Kullanıcı tipi belirleme"
+      ],
+      "metadata": {
+        "id": "qko_PCdOdFXL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "yaş = int(input(\"Yaşınızı giriniz: \"))\n",
+        "if yaş < 13:\n",
+        "    print(\"Çocuk kullanıcı.\")\n",
+        "elif yaş < 18:\n",
+        "    print(\"Genç kullanıcı.\")\n",
+        "elif yaş < 65:\n",
+        "    print(\"Yetişkin kullanıcı.\")\n",
+        "else:\n",
+        "    print(\"Yaşlı kullanıcı.\")"
+      ],
+      "metadata": {
+        "id": "epWLw71WjnmE"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.8 Örnek: Sıcaklık durumuna göre klima önerisi"
+      ],
+      "metadata": {
+        "id": "d9UA0B3WdFjP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sıcaklık = int(input(\"Oda sıcaklığını girin: \"))\n",
+        "if sıcaklık > 30:\n",
+        "    print(\"Klima açılmalı.\")\n",
+        "elif sıcaklık < 18:\n",
+        "    print(\"Klima ısıtma modunda çalışmalı.\")\n",
+        "else:\n",
+        "    print(\"Klima kapalı kalabilir.\")"
+      ],
+      "metadata": {
+        "id": "A7iYiQW8jtfP"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.9 Örnek: Banka faiz hesaplama"
+      ],
+      "metadata": {
+        "id": "ChEl9T_4dFuJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "miktar = float(input(\"Yatırılan miktarı girin: \"))\n",
+        "if mikt ar < 1000:\n",
+        "    faiz = miktar * 0.03\n",
+        "elif miktar < 5000:\n",
+        "    faiz = miktar * 0.05\n",
+        "else:\n",
+        "    faiz = miktar * 0.07\n",
+        "print(f\"Yıllık faiz getiriniz: {faiz} TL\")"
+      ],
+      "metadata": {
+        "id": "MaL4wNo8j3Nh"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.10 Örnek: Hangi mevsimde olduğumuzu belirleme"
+      ],
+      "metadata": {
+        "id": "SC6-Iw2AdF5R"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ay = input(\"Ay ismini girin: \").lower()\n",
+        "if ay in [\"aralık\", \"ocak\", \"şubat\"]:\n",
+        "    print(\"Kış mevsimi.\")\n",
+        "elif ay in [\"mart\", \"nisan\", \"mayıs\"]:\n",
+        "    print(\"İlkbahar mevsimi.\")\n",
+        "elif ay in [\"haziran\", \"temmuz\", \"ağustos\"]:\n",
+        "    print(\"Yaz mevsimi.\")\n",
+        "elif ay in [\"eylül\", \"ekim\", \"kasım\"]:\n",
+        "    print(\"Sonbahar mevsimi.\")\n",
+        "else:\n",
+        "    print(\"Geçersiz ay ismi.\")"
+      ],
+      "metadata": {
+        "id": "_R8CDfdbj7_x"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.11 Örnek: ÖSYM sınav başarı durumu"
+      ],
+      "metadata": {
+        "id": "bApbKJ0CdGE_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "puan = int(input(\"Sınav puanınızı girin: \"))\n",
+        "if puan >= 90:\n",
+        "    print(\"Başarı durumu: Üstün başarı\")\n",
+        "elif puan >= 70:\n",
+        "    print(\"Başarı durumu: Başarılı\")\n",
+        "elif puan >= 50:\n",
+        "    print(\"Başarı durumu: Orta\")\n",
+        "else:\n",
+        "    print(\"Başarı durumu: Başarısız\")"
+      ],
+      "metadata": {
+        "id": "KBDmFXXekDWj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.12 Örnek: Sayının mutlak değerini bulma"
+      ],
+      "metadata": {
+        "id": "Ntef7uaadGO1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sayı = -10\n",
+        "if sayı < 0:\n",
+        "    mutlak_değer = -sayı\n",
+        "else:\n",
+        "    mutlak_değer = sayı\n",
+        "print(f\"Mutlak değer: {mutlak_değer}\")"
+      ],
+      "metadata": {
+        "id": "6bWJh0-rkH02"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.13 Örnek: Sıcaklık birimine göre dönüştürme"
+      ],
+      "metadata": {
+        "id": "ozr--e6LdGZ3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "birim = \"C\"\n",
+        "değer = 25\n",
+        "if birim == \"C\":\n",
+        "    dönüşüm = (değer * 9/5) + 32\n",
+        "    print(f\"{değer} derece Celsius, {dönüşüm} Fahrenheit'e eşittir.\")\n",
+        "elif birim == \"F\":\n",
+        "    dönüşüm = (değer - 32) * 5/9\n",
+        "    print(f\"{değer} derece Fahrenheit, {dönüşüm} Celsius'a eşittir.\")\n",
+        "else:\n",
+        "    print(\"Geçersiz birim girdiniz.\")"
+      ],
+      "metadata": {
+        "id": "Ia9629pfkQ4l"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.14 Örnek: Kullanıcının yaş grubunu belirleme"
+      ],
+      "metadata": {
+        "id": "BJt5cYE1dGlr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "yaş = 40\n",
+        "if yaş < 13:\n",
+        "    print(\"Çocuk\")\n",
+        "elif yaş < 20:\n",
+        "    print(\"Genç\")\n",
+        "elif yaş < 60:\n",
+        "    print(\"Yetişkin\")\n",
+        "else:\n",
+        "    print(\"Yaşlı\")"
+      ],
+      "metadata": {
+        "id": "w7d8_wq6kW3b"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.15 Örnek: Geçerli e-posta kontrolü"
+      ],
+      "metadata": {
+        "id": "OikK-gZcdGwt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "email = \"ornek@domain.com\"\n",
+        "if \"@\" in email and \".\" in email:\n",
+        "    print(\"Geçerli bir e-posta adresi.\")\n",
+        "else:\n",
+        "    print(\"Geçersiz bir e-posta adresi.\")"
+      ],
+      "metadata": {
+        "id": "uCWAdsZ8kcRr"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.16 Örnek: Maaş vergisi hesaplama"
+      ],
+      "metadata": {
+        "id": "s3HiSHKydG8N"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "maaş = 45000\n",
+        "if maaş > 40000:\n",
+        "    vergi = maaş * 0.3\n",
+        "elif maaş > 20000:\n",
+        "    vergi = maaş * 0.2\n",
+        "else:\n",
+        "    vergi = maaş * 0.1\n",
+        "net_maaş = maaş - vergi\n",
+        "print(f\"Vergi sonrası maaşınız: {net_maaş}\")"
+      ],
+      "metadata": {
+        "id": "jpeWEbpSkina"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.17 Örnek: İki sayıyı karşılaştırma"
+      ],
+      "metadata": {
+        "id": "1f0m7OlJdHG-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 15\n",
+        "b = 10\n",
+        "if a > b:\n",
+        "    print(f\"{a}, {b}'den büyüktür.\")\n",
+        "elif a < b:\n",
+        "    print(f\"{a}, {b}'den küçüktür.\")\n",
+        "else:\n",
+        "    print(f\"{a} ve {b} birbirine eşittir.\")"
+      ],
+      "metadata": {
+        "id": "OmGYJ1sHkoQu"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.18 Örnek: Sıcaklık durumuna göre öneri"
+      ],
+      "metadata": {
+        "id": "sg9Wf_D2dHRo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sıcaklık = 5\n",
+        "if sıcaklık > 25:\n",
+        "    print(\"Hava sıcak, dışarı çıkabilirsiniz.\")\n",
+        "elif sıcaklık > 10:\n",
+        "    print(\"Hava serin, bir ceket alabilirsiniz.\")\n",
+        "else:\n",
+        "    print(\"Hava soğuk, kalın giyinin.\")"
+      ],
+      "metadata": {
+        "id": "3_fVASWwku8m"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.19 Örnek: Kullanıcı adını kontrol etme"
+      ],
+      "metadata": {
+        "id": "IBRi1mFtdHth"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "kullanıcı_adı = \"admin\"\n",
+        "if len(kullanıcı_adı) >= 5:\n",
+        "    print(\"Kullanıcı adı geçerli.\")\n",
+        "else:\n",
+        "    print(\"Kullanıcı adı en az 5 karakter olmalıdır.\")"
+      ],
+      "metadata": {
+        "id": "p68RR8R7k0QQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.20 Örnek: Kargo fiyatı hesaplama"
+      ],
+      "metadata": {
+        "id": "M_4JhiiXdH4C"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mesafe = 300\n",
+        "if mesafe <= 100:\n",
+        "    ücret = 50\n",
+        "elif mesafe <= 500:\n",
+        "    ücret = 100\n",
+        "else:\n",
+        "    ücret = 150\n",
+        "print(f\"Kargo ücreti: {ücret} TL\")\n"
+      ],
+      "metadata": {
+        "id": "tZqdUR6mk55W"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.21 Örnek: İki sayının toplamını kontrol etme"
+      ],
+      "metadata": {
+        "id": "A85Ygpy9dICv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 60\n",
+        "b = 45\n",
+        "if a + b > 100:\n",
+        "    print(\"Toplam 100’den büyüktür.\")\n",
+        "else:\n",
+        "    print(\"Toplam 100’den küçüktür.\")"
+      ],
+      "metadata": {
+        "id": "pXLhVARVk_EB"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.22 Örnek: Öğrenci başarı durumu"
+      ],
+      "metadata": {
+        "id": "0epTKmzzdINR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "vize = 50\n",
+        "final = 70\n",
+        "ortalama = (vize * 0.4) + (final * 0.6)\n",
+        "if ortalama >= 60:\n",
+        "    print(\"Geçtiniz.\")\n",
+        "else:\n",
+        "    print(\"Kaldınız.\")"
+      ],
+      "metadata": {
+        "id": "RTgGN2AllHmp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.23 Örnek: Saatlik ücret hesaplama"
+      ],
+      "metadata": {
+        "id": "XgCXRc2EdIYn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "saatlik_ücret = 20\n",
+        "çalışma_saati = 45\n",
+        "if çalışma_saati > 40:\n",
+        "    fazla_mesai = çalışma_saati - 40\n",
+        "    toplam_ücret = (40 * saatlik_ücret) + (fazla_mesai * saatlik_ücret * 1.5)\n",
+        "else:\n",
+        "    toplam_ücret = çalışma_saati * saatlik_ücret\n",
+        "print(f\"Toplam maaş: {toplam_ücret}\")"
+      ],
+      "metadata": {
+        "id": "_hq0Pz8SlM-r"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.24 Örnek: Telefon faturası hesaplama"
+      ],
+      "metadata": {
+        "id": "F27aU23AdIjx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dakika = 350\n",
+        "if dakika <= 100:\n",
+        "    fatura = dakika * 0.5\n",
+        "elif dakika <= 300:\n",
+        "    fatura = (100 * 0.5) + ((dakika - 100) * 0.4)\n",
+        "else:\n",
+        "    fatura = (100 * 0.5) + (200 * 0.4) + ((dakika - 300) * 0.3)\n",
+        "print(f\"Fatura tutarınız: {fatura} TL\")"
+      ],
+      "metadata": {
+        "id": "bHVSYF32lR0s"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.25 Örnek: İndirim hesaplama"
+      ],
+      "metadata": {
+        "id": "StoTamUBdIuz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alışveriş = 600\n",
+        "if alışveriş > 1000:\n",
+        "    indirim = alışveriş * 0.2\n",
+        "elif alışveriş > 500:\n",
+        "    indirim = alışveriş * 0.1\n",
+        "else:\n",
+        "    indirim = 0\n",
+        "ödenecek = alışveriş - indirim\n",
+        "print(f\"Ödenecek tutar: {ödenecek} TL\")"
+      ],
+      "metadata": {
+        "id": "ZmErd9eflXWK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.26 Örnek: Ürün stok kontrolü"
+      ],
+      "metadata": {
+        "id": "tZB_XOxJdI56"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "stok = 25\n",
+        "sipariş = 30\n",
+        "if sipariş <= stok:\n",
+        "    print(\"Siparişiniz kabul edildi.\")\n",
+        "else:\n",
+        "    print(f\"Yetersiz stok! Mevcut stok: {stok}\")"
+      ],
+      "metadata": {
+        "id": "zcG5W6NClb_t"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.27 Örnek: Geçerli kullanıcı kontrolü"
+      ],
+      "metadata": {
+        "id": "iMRVIsFQdJEs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "kullanıcı_adı = \"admin\"\n",
+        "şifre = \"1234\"\n",
+        "girilen_ad = \"admin\"\n",
+        "girilen_şifre = \"1234\"\n",
+        "if girilen_ad == kullanıcı_adı and girilen_şifre == şifre:\n",
+        "    print(\"Giriş başarılı.\")\n",
+        "else:\n",
+        "    print(\"Kullanıcı adı veya şifre hatalı.\")"
+      ],
+      "metadata": {
+        "id": "Szm5ng89limd"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.28 Örnek: Alışveriş sepeti kampanya kontrolü"
+      ],
+      "metadata": {
+        "id": "cKMbFtPcdJPH"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sepet_tutarı = 750\n",
+        "if sepet_tutarı >= 1000:\n",
+        "    print(\"Bir sonraki alışverişte %20 indirim kazandınız.\")\n",
+        "elif sepet_tutarı >= 500:\n",
+        "    print(\"Bir sonraki alışverişte %10 indirim kazandınız.\")\n",
+        "else:\n",
+        "    print(\"Kampanyaya dahil değilsiniz.\")"
+      ],
+      "metadata": {
+        "id": "LvsUj0BoloNq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.29 Örnek: Elektrik faturası hesaplama"
+      ],
+      "metadata": {
+        "id": "4ueKQlyqdJaZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tüketim = 350\n",
+        "if tüketim <= 150:\n",
+        "    fatura = tüketim * 0.5\n",
+        "elif tüketim <= 300:\n",
+        "    fatura = (150 * 0.5) + ((tüketim - 150) * 0.75)\n",
+        "else:\n",
+        "    fatura = (150 * 0.5) + (150 * 0.75) + ((tüketim - 300) * 1.0)\n",
+        "print(f\"Fatura tutarınız: {fatura} TL\")"
+      ],
+      "metadata": {
+        "id": "jzIoU506ls1i"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.30 Örnek: Vize ve final sınavı geçme durumu"
+      ],
+      "metadata": {
+        "id": "gUwUxqjmdJl_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "vize = 60\n",
+        "final = 40\n",
+        "ortalama = (vize * 0.4) + (final * 0.6)\n",
+        "if ortalama >= 50 and final >= 50:\n",
+        "    print(\"Geçtiniz.\")\n",
+        "else:\n",
+        "    print(\"Kaldınız.\")"
+      ],
+      "metadata": {
+        "id": "3igf-diplyFF"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.31 Örnek: Sıcaklık durumuna göre kıyafet önerisi"
+      ],
+      "metadata": {
+        "id": "I-kvfMAkdJwi"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sıcaklık = 12\n",
+        "if sıcaklık > 25:\n",
+        "    print(\"Tişört giyin.\")\n",
+        "elif sıcaklık > 15:\n",
+        "    print(\"Hafif bir ceket giyin.\")\n",
+        "else:\n",
+        "    print(\"Kalın bir mont alın.\")"
+      ],
+      "metadata": {
+        "id": "ERXNjIZll8tU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.32 Örnek: Üç sayı arasındaki en büyüğü bulma"
+      ],
+      "metadata": {
+        "id": "D5tNesKpdJ7k"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 45\n",
+        "b = 67\n",
+        "c = 23\n",
+        "if a > b and a > c:\n",
+        "    print(f\"En büyük sayı: {a}\")\n",
+        "elif b > c:\n",
+        "    print(f\"En büyük sayı: {b}\")\n",
+        "else:\n",
+        "    print(f\"En büyük sayı: {c}\")"
+      ],
+      "metadata": {
+        "id": "oXthlE7tmCGO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.33 Örnek: Kullanıcı tipi belirleme"
+      ],
+      "metadata": {
+        "id": "0q7eP-TqdKGc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "yaş = 25\n",
+        "if yaş < 13:\n",
+        "    print(\"Çocuk kullanıcı.\")\n",
+        "elif yaş < 18:\n",
+        "    print(\"Genç kullanıcı.\")\n",
+        "elif yaş < 65:\n",
+        "    print(\"Yetişkin kullanıcı.\")\n",
+        "else:\n",
+        "    print(\"Yaşlı kullanıcı.\")"
+      ],
+      "metadata": {
+        "id": "5lqKHH3jmSPz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.34 Örnek: Girilen sayının pozitif, negatif ya da sıfır olduğunu belirleme"
+      ],
+      "metadata": {
+        "id": "1E172r1_dKRP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sayı = -5\n",
+        "if sayı > 0:\n",
+        "    print(\"Pozitif.\")\n",
+        "elif sayı < 0:\n",
+        "    print(\"Negatif.\")\n",
+        "else:\n",
+        "    print(\"Sıfır.\")"
+      ],
+      "metadata": {
+        "id": "ld3O_vy4mXj0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.35 Örnek: Telefon hattı tarifesi"
+      ],
+      "metadata": {
+        "id": "tv81iJ7_dKb6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dakika = 400\n",
+        "if dakika <= 100:\n",
+        "    ücret = dakika * 0.5\n",
+        "elif dakika <= 300:\n",
+        "    ücret = (100 * 0.5) + ((dakika - 100) * 0.4)\n",
+        "else:\n",
+        "    ücret = (100 * 0.5) + (200 * 0.4) + ((dakika - 300) * 0.3)\n",
+        "print(f\"Telefon faturası: {ücret} TL\")"
+      ],
+      "metadata": {
+        "id": "Usvgb3-zmdPt"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.36 Örnek: Şifre güvenliği kontrolü"
+      ],
+      "metadata": {
+        "id": "915Q-_GIdKlz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "şifre = \"Şifre123\"\n",
+        "if len(şifre) >= 8:\n",
+        "    if any(char.isdigit() for char in şifre) and any(char.isupper() for char in şifre):\n",
+        "        print(\"Şifre güvenli.\")\n",
+        "    else:\n",
+        "        print(\"Şifre, hem harf hem rakam içermeli.\")\n",
+        "else:\n",
+        "    print(\"Şifre en az 8 karakter uzunluğunda olmalı.\")"
+      ],
+      "metadata": {
+        "id": "vnl37kh8mh6E"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.37 Örnek: Alışveriş kampanya uygulaması"
+      ],
+      "metadata": {
+        "id": "IKCDapYPdKwS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alışveriş_tutarı = 800\n",
+        "if alışveriş_tutarı > 1000:\n",
+        "    indirim = alışveriş_tutarı * 0.2\n",
+        "    print(f\"%20 indirim kazandınız! İndirim: {indirim} TL\")\n",
+        "elif alışveriş_tutarı > 500:\n",
+        "    indirim = alışveriş_tutarı * 0.1\n",
+        "    print(f\"%10 indirim kazandınız! İndirim: {indirim} TL\")\n",
+        "else:\n",
+        "    indirim = 0\n",
+        "    print(\"Kampanyaya dahil değilsiniz.\")\n",
+        "print(f\"Ödenecek tutar: {alışveriş_tutarı - indirim} TL\")"
+      ],
+      "metadata": {
+        "id": "FUUiZ5Ihmk19"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.38 Örnek: Bir sayının çift ya da tek olmasının ötesinde kategorilere ayırma"
+      ],
+      "metadata": {
+        "id": "4OLoUlHodK7E"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sayı = 0\n",
+        "if sayı == 0:\n",
+        "    print(\"Sayı sıfır.\")\n",
+        "elif sayı % 2 == 0:\n",
+        "    print(\"Sayı çift.\")\n",
+        "else:\n",
+        "    print(\"Sayı tek.\")"
+      ],
+      "metadata": {
+        "id": "7FVAwQRZmwdZ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.39 Örnek: Harf kategorisi belirleme"
+      ],
+      "metadata": {
+        "id": "RcggxTrSdLGF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "harf = \"e\"\n",
+        "if harf in \"aeiouAEIOU\":\n",
+        "    print(f\"{harf} bir sesli harftir.\")\n",
+        "else:\n",
+        "    print(f\"{harf} bir sessiz harftir.\")"
+      ],
+      "metadata": {
+        "id": "96mCddl9m42t"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.40 Örnek: Kredi başvuru sonucu"
+      ],
+      "metadata": {
+        "id": "Rb5HBK4NdLQS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "gelir = 4000\n",
+        "kredi_notu = 700\n",
+        "if gelir >= 5000 and kredi_notu >= 750:\n",
+        "    print(\"Kredi onaylandı.\")\n",
+        "elif gelir >= 3000 and kredi_notu >= 650:\n",
+        "    print(\"Kredi onaylandı, fakat düşük limit.\")\n",
+        "else:\n",
+        "    print(\"Kredi başvurunuz reddedildi.\")"
+      ],
+      "metadata": {
+        "id": "XtEEEYWhm-Hq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.41 Örnek: Dönemlik kar-zarar hesaplama"
+      ],
+      "metadata": {
+        "id": "Fuu2HcY1dLa2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "gelir = 15000\n",
+        "gider = 18000\n",
+        "if gelir > gider:\n",
+        "    print(f\"Kar: {gelir - gider} TL\")\n",
+        "elif gelir < gider:\n",
+        "    print(f\"Zarar: {gider - gelir} TL\")\n",
+        "else:\n",
+        "    print(\"Ne kar ne zarar. Durum sıfır.\")"
+      ],
+      "metadata": {
+        "id": "4o6V7ErDnDta"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.42 Örnek: Araç hız kontrolü"
+      ],
+      "metadata": {
+        "id": "dEQ2W3hudLlA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "hız = 90\n",
+        "if hız <= 50:\n",
+        "    print(\"Hızınız normal.\")\n",
+        "elif hız <= 80:\n",
+        "    print(\"Hızınızı düşürün , uyarı aldınız.\")\n",
+        "else:\n",
+        "    print(\"Hız sınırını aştınız! Ceza uygulanacak.\")"
+      ],
+      "metadata": {
+        "id": "jbny0taxnLch"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.43 Örnek: Kullanıcı şifre oluşturma kuralları"
+      ],
+      "metadata": {
+        "id": "5AzFqlZGdLvV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "şifre = \"123Password\"\n",
+        "if len(şifre) >= 8:\n",
+        "    if any(char.isdigit() for char in şifre) and any(char.isupper() for char in şifre):\n",
+        "        print(\"Şifre kabul edildi.\")\n",
+        "    else:\n",
+        "        print(\"Şifre, en az bir rakam ve büyük harf içermelidir.\")\n",
+        "else:\n",
+        "    print(\"Şifre en az 8 karakter olmalıdır.\")"
+      ],
+      "metadata": {
+        "id": "uZBLjGBqnUMV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.44 Örnek: Üç sayının toplamının diğer bir sayıya eşit olup olmadığını kontrol etme\n"
+      ],
+      "metadata": {
+        "id": "vWOq1m0KdL5M"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 10\n",
+        "b = 20\n",
+        "c = 30\n",
+        "if a + b == c or a + c == b or b + c == a:\n",
+        "    print(\"Bir sayı diğer ikisinin toplamına eşittir.\")\n",
+        "else:\n",
+        "    print(\"Hiçbir sayı diğerlerinin toplamına eşit değil.\")"
+      ],
+      "metadata": {
+        "id": "UfTM7FX6noaH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.45 Örnek: Öğrenci burs hakkı kontrolü"
+      ],
+      "metadata": {
+        "id": "79P48RCRdMDg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ortalama = 85\n",
+        "ailenin_geliri = 3000\n",
+        "if ortalama >= 90 or (ortalama >= 80 and ailenin_geliri < 4000):\n",
+        "    print(\"Burs kazandınız.\")\n",
+        "else:\n",
+        "    print(\"Burs hakkınız yok.\")"
+      ],
+      "metadata": {
+        "id": "9ej0GaxNntL6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.46 Örnek: Mevsim belirleme"
+      ],
+      "metadata": {
+        "id": "1ybKTc3HdMNO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ay = \"Nisan\"\n",
+        "if ay in [\"Aralık\", \"Ocak\", \"Şubat\"]:\n",
+        "    print(\"Kış mevsimi.\")\n",
+        "elif ay in [\"Mart\", \"Nisan\", \"Mayıs\"]:\n",
+        "    print(\"İlkbahar mevsimi.\")\n",
+        "elif ay in [\"Haziran\", \"Temmuz\", \"Ağustos\"]:\n",
+        "    print(\"Yaz mevsimi.\")\n",
+        "elif ay in [\"Eylül\", \"Ekim\", \"Kasım\"]:\n",
+        "    print(\"Sonbahar mevsimi.\")\n",
+        "else:\n",
+        "    print(\"Geçersiz ay girdiniz.\")"
+      ],
+      "metadata": {
+        "id": "R2m9MMHnn94q"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8.47 Örnek: Maaş artırımı"
+      ],
+      "metadata": {
+        "id": "2VLHAd8AdMXq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "maaş = 4000\n",
+        "if maaş < 3000:\n",
+        "    zam = maaş * 0.25\n",
+        "elif maaş <= 5000:\n",
+        "    zam = maaş * 0.15\n",
+        "else:\n",
+        "    zam = maaş * 0.10\n",
+        "print(f\"Yeni maaşınız: {maaş + zam} TL\")"
+      ],
+      "metadata": {
+        "id": "Lil_kxmWoFEJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
